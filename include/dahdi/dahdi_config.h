@@ -37,7 +37,7 @@
  * This will stop the flash being mis-detected as a pulse dial "1" on
  *  phones with short flashes
  */
-/* #define SHORT_FLASH_TIME */
+#define SHORT_FLASH_TIME
 
 /*
  * Uncomment to disable calibration tests

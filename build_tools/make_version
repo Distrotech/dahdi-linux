@@ -3,7 +3,7 @@
 if [ -f ${1}/.version ]; then
 	cat ${1}/.version
 elif [ -d ${1}/.git ]; then
-    VERSION=`git describe --tags --dirty=M 2> /dev/null | sed -e "s/^v\([0-9]\)/\1/"`
+    VERSION=`git describe --tags --dirty=M 2> /dev/null | sed -e "s/.*[v-]\([0-9]\)/\1/"`
     if [ $? -ne 0 ]; then
         MODIFIED=""
         if [ "`git ls-files -m | wc -l`" != "0" ]; then
